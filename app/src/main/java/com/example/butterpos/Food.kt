@@ -2,7 +2,9 @@ package com.example.butterpos
 
 import android.graphics.Picture
 
-data class Food(val results:List<AmericanFoods>)
+data class Food(
+    val meals:List<AmericanFoods>
+    )
 data class AmericanFoods(
     val strMeal: String,
     val strMealThumb: String

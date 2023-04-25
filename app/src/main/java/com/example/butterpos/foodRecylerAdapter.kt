@@ -24,7 +24,7 @@ class foodRecyclerAdapter(foodList: ArrayList<Food>) : RecyclerView.Adapter<food
     }
     override fun onBindViewHolder(holder:FoodViewHolder, position:Int) {
         val currentFood = AmericanFoods[position]
-        holder.foodName.text = ${currentFood.strMeal}
+        holder.foodName.text = "${currentFood.strMeal}"
         holder.foodImage.setImageResource(currentFood.strMealThumb)
 
 
