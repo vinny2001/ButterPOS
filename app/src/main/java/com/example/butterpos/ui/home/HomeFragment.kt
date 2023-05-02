@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.butterpos.R
 import com.example.butterpos.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -32,6 +33,16 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        //This creates another fragment inside the home fragment
+
+        val childFragment = ChildFragment()
+        childFragmentManager.beginTransaction()
+            .replace(R.id.child_fragment_container, childFragment)
+            .commit()
+
+
+
         return root
     }
 
