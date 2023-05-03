@@ -29,19 +29,27 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
+        val textView: TextView = binding.textWelcome
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
 
         //This creates another fragment inside the home fragment
 
-        val childFragment = ChildFragment()
+        val receiptFragment = ReceiptFragment()
         childFragmentManager.beginTransaction()
-            .replace(R.id.child_fragment_container, childFragment)
+            .replace(R.id.receipt_fragment_container, receiptFragment)
             .commit()
 
+        val supportFragment = SupportFragment()
+        childFragmentManager.beginTransaction()
+            .replace(R.id.support_fragment_container, supportFragment)
+            .commit()
 
+        val totalFragment = TotalFragment()
+        childFragmentManager.beginTransaction()
+            .replace(R.id.total_fragment_container, totalFragment)
+            .commit()
 
         return root
     }

@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.butterpos.R
 
-class ChildFragment : Fragment() {
+class TotalFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val root = inflater.inflate(R.layout.fragment_child, container, false)
+        val root = inflater.inflate(R.layout.fragment_total, container, false)
         // Do any additional setup for the child fragment here
         return root
     }
